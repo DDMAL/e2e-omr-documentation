@@ -2,7 +2,6 @@
 layout: default
 title: Home
 nav_order: 0
-
 ---
 
 This site is to provide information on the *Optical Music Recognition* (OMR) process and how to use it in the [Rodan workflow manager](https://ddmal.music.mcgill.ca/Rodan).
