@@ -26,6 +26,7 @@ from scratch.
 {% endfigure %}
 
 For more information on using Pixel.js, consult [the project's wiki](https://github.com/DDMAL/Pixel.js/wiki/).
+For information on the version of Pixel.js in Rodan, including how to properly set up input and output ports, [look at the project's README](https://github.com/DDMAL/pixel_wrapper/blob/master/README.md).
 
 ## Patchwise Trainer
 
