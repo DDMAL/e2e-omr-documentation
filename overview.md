@@ -33,11 +33,14 @@ Classifier, Interactive Classifier, Biollante.
 
 ## Music Reconstruction and Encoding
 
-Heuristic Pitch Finding, Staff Finding, Text Alignment.
+With symbols grouped into broad categories (staff lines, text, music symbols) and then into more precise categories as necessary (C clefs, custodes, punctums, etc.) other values can be assigned to these symbols.
+The jobs for this involve finding staves ([Miyao Staff Finding](https://github.com/DDMAL/gamera_rodan)), finding the pitches of musical elements ([Heuristic Pitch Finding](https://github.com/DDMAL/heuristic-pitch-finding)), and aligning a plaintext version of text on the page to the actual text glyphs ([Text Alignment](https://github.com/DDMAL/text_alignment)).
 
 ## Symbolic Score Generation and Correction
 
-MEI Encoding, Neon.
+The [MEI Encoding](https://github.com/DDMAL/MEI_encoding) job takes the data from the previous jobs and encodes them into the [MEI](https://music-encoding.org) format.
+
+Following MEI generation, [Neon](https://github.com/DDMAL/Neon) can be used to correct errors in the OMR process for square-notation manuscripts.
 
 ## Footnotes
 
