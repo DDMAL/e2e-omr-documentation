@@ -28,6 +28,8 @@ from scratch.
 For more information on using Pixel.js, consult [the project's wiki](https://github.com/DDMAL/Pixel.js/wiki/).
 For information on the version of Pixel.js in Rodan, including how to properly set up input and output ports, [look at the project's README](https://github.com/DDMAL/pixel_wrapper/blob/master/README.md).
 
+**Note: When loading pre-existing layers into Pixel, the layers must finish loading before starting the Pixel plug-in in Diva. If not, the layers will not appear.**
+
 ## Patchwise Trainer
 
 The [Patchwise Trainer](https://github.com/DDMAL/Calvo-classifier) job (actually named *Training model for
