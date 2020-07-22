@@ -1,9 +1,16 @@
 ---
 layout: default
 title: Score Generation and Correction
+nav_order: 5
 ---
 
 # Score Generation
+
+Score generation is performed with the [MEI encoding](https://github.com/DDMAL/MEI_encoding) job.
+This job uses the information produced in the reconstruction and encoding steps to create a valid symbolic document.
+Glyphs are matched to MEI snippets and pitch data is applied if applicable.
+
+If text alignment was performed, textual information is also included and used to group neumes into syllables complete with text.
 
 # Score Correction
 

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Document Analysis
+nav_order: 2
 ---
 
 # Document Analysis
