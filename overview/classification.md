@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Symbol Classification
-nav_order: 3
+parent: Overview
+nav_order: 2
 ---
 
 # Biollante

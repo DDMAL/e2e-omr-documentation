@@ -1,7 +1,8 @@
 ---
 layout: default
 title: Score Generation and Correction
-nav_order: 5
+parent: Overview
+nav_order: 4
 ---
 
 # Score Generation
