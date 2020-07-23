@@ -5,9 +5,38 @@ parent: Overview
 nav_order: 2
 ---
 
+The jobs in this section are based on jobs in and use features from [Gamera](https://gamera.informatik.hsnr.de/).
+
 # Biollante
 
-*TODO*
+[Biollante](https://github.com/DDMAL/biollante-rodan) is based on the Gamera job of the same name.
+It is used to select or weigh features from a set of connected components for use in classification.
+From [the Gamera documentation](https://gamera.informatik.hsnr.de/docs/gamera-docs/ga_optimization.html#introduction):
+
+> Feature selection is the technique of selecting a subset of good features out of a larger
+> featureset to obtain the features which are suitable for the best possible classification.
+> Feature weighting is a generalization of feature selection with real-valued weights between
+> [0,1] instead of the binary values 0/1.
+>
+> Due to the fact that feature selection and weighting are NP-hard optimization problems,
+> a complete and correct solution is not easy to determine. One way to get an approximate
+> solution is by using genetic algorithms. Even though feature weighting is a generalization
+> of feature selection and should thus be able to produce better classification results,
+> practice has shown that feature selection produces better recognition rates in most cases.
+> It is thus recommended to use feature selection rather than feature weighting [[Bolten2012]](https://gamera.informatik.hsnr.de/docs/gamera-docs/ga_optimization.html#bolten2012).
+
+Biollante allows the user to set parameters for optimization and requires the user to set a *stop condition*.
+Biollante goes back and forth between an interactive component, where the user is able to
+set the parameters and stop conditions from amenu, and a noninteractive component where
+the genetic algorithm is run.
+
+### Input Ports
+
+* **Classifier Data** - A file of connected components to optimize for kNN classification.
+
+### Output Ports
+
+* **Feature Weights/Selection** - The results of the feature weighting or selection that can be used in classification.
 
 # Interactive Classifier
 
@@ -34,7 +63,3 @@ The job has the following input and output ports. Optional input ports are in *i
 * **Training Data** - The training data generated during the manual classification stage.
 * **Class Names** - The class and subclass names used during classification.
 * **Classified Glyphs** - The glyphs classified as part of the job.
-
-# Classifier
-
-*TODO*
