@@ -45,6 +45,6 @@ Following MEI generation, [Neon](https://github.com/DDMAL/Neon) can be used to c
 
 ## Footnotes
 
-[^1]: [G. Vigliensoni et al., “From image to encoding: Full optical music recognition of Medieval and Renaissance music,” presented at the Music Encoding Conference, University of Vienna, Vienna, Austria, May 2019.](https://music-encoding.org/conference/2019/abstracts_mec2019/vigliensoni19from%20camera%20ready.pdf)
+[^1]: [G. Vigliensoni et al., “From image to encoding: Full optical music recognition of Medieval and Renaissance music,” presented at the Music Encoding Conference, University of Vienna, Vienna, Austria, May 2019.](https://github.com/music-encoding/music-encoding.github.io/raw/master/_conferences/2019/abstracts_mec2019/vigliensoni19from%20camera%20ready.pdf)
 [^2]: [Z. Saleh, K. Zhang, J. Calvo-Zaragoza, G. Vigliensoni, and I. Fujinaga, “Pixel.js: Web-based Pixel Classification Correction Platform for Ground Truth Creation,” in Proceedings of the Twelfth IAPR International Workshop on Graphics Recognition, Kyoto, Japan, 2017.](https://doi.org/10.1109/ICDAR.2017.267)
 [^3]: [J. Calvo-Zaragoza, G. Vigliensoni, and I. Fujinaga, “Pixelwise classification for music document analysis,” in 2017 Seventh International Conference on Image Processing Theory, Tools and Applications (IPTA), Nov. 2017.](https://doi.org/10.3390/app8050654)
