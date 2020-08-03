@@ -34,6 +34,12 @@ _A_15th_century_Italian_antiphonal___manuscript__0_230_.jpg -append 40-230.jpg
 ![Combined Image of Neume Layers](/assets/40-230_Neumes.png){:width="275"}
 {% endfigure %}
 
+After testing with the training, it was determined the images needed to be
+resized. They were resized to 52% by using the following command:
+```bash
+convert 40-230.jpg -resize 52% 40-230-Resized.jpg
+```
+
 These combined files were uploaded back to Rodan for the next step.
 
 # Model Training
