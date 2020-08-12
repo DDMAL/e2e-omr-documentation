@@ -49,6 +49,22 @@ This approach is typically better for square-notation documents as it is
 possible to quickly get much more training data for the smaller set of
 classes compared to the many possible neumes that can appear.
 
+## Using the (Non-Interactive) Classifier
+
+The Interactive Classifier is wonderful for getting started, but it would be
+much more convenient (and faster) to use an automated classifier that
+already recognizes the different classes. Luckily, the Interactive Classifier
+allows us to prepare the resources for this. There is a non-interactive
+classifier job (just called "Classifier") which takes a set of connected
+components to classify, much like the Interactive Classifier, but also
+requires a set of training data used to classify the connected components.
+It can also optionally accept a set of feature weights produced by Biollante.
+
+Of course a single page likely does not provide enough training data on every kind of glyph that may be encountered.
+Training data can be added as an output from the Interactive Classifier, but then used again as an input on another page allowing for more
+training data to be generated. Once enough is added, the training data
+output from that job can be used in the non-interactive classifier job.
+
 # Note on Using Biollante
 
 The Biollante job is an optional part of this process.
