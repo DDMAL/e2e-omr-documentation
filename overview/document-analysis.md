@@ -23,9 +23,12 @@ is to use existing classifier models to generate layers of the source image to u
 Errors would be made, but these can be corrected in Pixel.js and saves time compared to working
 from scratch.
 
-{% figure caption:"Classifier to Pixel Workflow in Rodan"%}
+<figure markdown="1">
 ![](../assets/classifier-pixel-workflow.png)
-{% endfigure %}
+<figcaption>
+Classifier to Pixel Workflow in Rodan
+</figcaption>
+</figure>
 
 For more information on using Pixel.js, consult [the project's wiki](https://github.com/DDMAL/Pixel.js/wiki/).
 For information on the version of Pixel.js in Rodan, including how to properly set up input and output ports, [look at the project's README](https://github.com/DDMAL/pixel_wrapper/blob/master/README.md).

@@ -15,9 +15,12 @@ The workflow present in Rodan and discussed here is segmented into four stages[^
 3. Music Reconstruction and Encoding
 4. Symbolic Score Generation and Correction
 
-{% figure caption:"Stages of the OMR Process (Vigliensoni et al. 2019)"%}
+<figure markdown="1">
 ![](assets/omr_stages.png)
-{% endfigure %}
+<figcaption>
+Stages of the OMR Process (Vigliensoni et al. 2019)
+</figcaption>
+</figure>
 
 There are different jobs in Rodan meant for each job.
 

@@ -31,9 +31,12 @@ convert -background black _A_15th_century_Italian_antiphonal___manuscript__0_40_
 _A_15th_century_Italian_antiphonal___manuscript__0_230_0.jpg \
 _A_15th_century_Italian_antiphonal___manuscript__0_176_0.jpg -append 40-230-176.jpg
 ```
-{% figure caption:"Combined Image of Neume Layers" %}
+<figure markdown="1">
 ![Combined Image of Neume Layers](/assets/40-230_Neumes.png){:width="275"}
-{% endfigure %}
+<figcaption>
+Combined Image of Neume Layers
+</figcaption>
+</figure>
 
 After testing with the training, it was determined the images needed to be
 resized. They were resized to 52.2% by using the following command:
