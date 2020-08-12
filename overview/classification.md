@@ -63,3 +63,24 @@ The job has the following input and output ports. Optional input ports are in *i
 * **Training Data** - The training data generated during the manual classification stage.
 * **Class Names** - The class and subclass names used during classification.
 * **Classified Glyphs** - The glyphs classified as part of the job.
+
+# (Non-Interactive) Classifier
+
+The Classifier job is based on the non-interactive Gamera classifier.
+Instead of iteratively classifying glyphs and generating training data
+like the Interactive Classifier, this job requires training data as an
+input and then classifies a provided set of connected components *without*
+user input.
+
+## Classifier Ports
+
+### Input Ports
+
+* **Training Data** - A file containing existing training data, for example from the Interactive Classifier job.
+* **Connected Components** - A file containing the glyphs to be classified.
+* *Feature Selection/Weights* - A file specifying the features to use or which weights to assign to the features.
+This can be produced by [Biollante](#biollante).
+
+### Output Ports
+
+* **Classified Glyphs** - The glyphs classified as part of the job.
