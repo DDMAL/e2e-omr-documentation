@@ -23,7 +23,7 @@ If text alignment was performed, textual information is also included and used t
 * **MEI Mapping CSV** - A file mapping classes of glyphs to MEI snippets.
 This can be produced by the [MEI Mapping Tool](https://github.com/DDMAL/mei-mapping-tool).
 * *Text Alignment JSON* - A file containing the text alignment information
-from the [Text Alignment job](/overview/reconstruction-and-encoding#text-alignment).
+from the [Text Alignment job]({{site.baseurl}}/overview/reconstruction-and-encoding#text-alignment).
 
 ### Output Ports
 

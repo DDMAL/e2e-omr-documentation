@@ -20,13 +20,13 @@ just masks extracted from the source image. These are created by the
 Optionally, a step could be inserted between the CC Analysis job and
 Interactive Classifier job where [Diagonal Neume Slicing](https://github.com/DDMAL/diagonal-neume-slicing) is run to split neumes into neume components more often, reducing the number of classes to be classified.
 
-![Workflow until Interactive Classifier](/assets/workflow-to-ic.png)
+![Workflow until Interactive Classifier]({{site.baseurl}}/assets/workflow-to-ic.png)
 
 Above is a workflow containing the jobs necessary to prepare the inputs for Interactive Classifier.
 
 # Interactive Classification
 
-The [Interactive Classifier](/overview/classification#interactive-classifier)
+The [Interactive Classifier]({{site.baseurl}}/overview/classification#interactive-classifier)
 allows the glyphs from the music symbols layer to be classified as different
 element types. Typically naming of these classes follows some sort of hierarchy.
 For example, a C clef would be classified as `clef.c` and a punctum would be
@@ -72,6 +72,6 @@ It attempts to optimize the features used in the classifier based on
 training data. Training data can be obtained from the Interactive Classifier
 through an optional output port.
 
-After Biollante is run (for details see [the overview page on it and links there](/overview/classification#biollante)), feature weights or selections are generated.
+After Biollante is run (for details see [the overview page on it and links there]({{site.baseurl}}/overview/classification#biollante)), feature weights or selections are generated.
 These can be used as inputs to the non-interactive Classifier job along with
 training data and unclassified connected components.

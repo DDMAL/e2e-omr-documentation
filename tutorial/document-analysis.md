@@ -10,7 +10,7 @@ nav_order: 1
 # Image Layering
 
 It's usually necessary to create a new model to split images into layers.
-This can be done using [Pixel.js](/overview/document-analysis#pixeljs) or a desktop program like [Pixelmator](http://www.pixelmator.com/).
+This can be done using [Pixel.js]({{site.baseurl}}/overview/document-analysis#pixeljs) or a desktop program like [Pixelmator](http://www.pixelmator.com/).
 This process is time consuming and can be sped up if you have a model already
 trained on a similar manuscript.
 In this case, [models from the Salzinnes manuscript](https://github.com/DDMAL/Calvo-classifier/tree/develop/Models/01-square-notation/02-three-pages-val-acc-20-epochs/models) can be used.
@@ -32,7 +32,7 @@ _A_15th_century_Italian_antiphonal___manuscript__0_230_0.jpg \
 _A_15th_century_Italian_antiphonal___manuscript__0_176_0.jpg -append 40-230-176.jpg
 ```
 <figure markdown="1">
-![Combined Image of Neume Layers](/assets/40-230_Neumes.png){:width="275"}
+![Combined Image of Neume Layers]({{site.baseurl}}/assets/40-230_Neumes.png){:width="275"}
 <figcaption>
 Combined Image of Neume Layers
 </figcaption>
@@ -48,7 +48,7 @@ These combined files were uploaded back to Rodan for the next step.
 
 # Model Training
 
-Once the images and layers to use have been combined, the [Patchwise Trainer](/overview/document-analysis#hpc-patchwise-trainer) can be used
+Once the images and layers to use have been combined, the [Patchwise Trainer]({{site.baseurl}}/overview/document-analysis#hpc-patchwise-trainer) can be used
 to generate new models.
 For larger images (especially when combined), it may
 be necessary to use

@@ -24,7 +24,7 @@ Errors would be made, but these can be corrected in Pixel.js and saves time comp
 from scratch.
 
 <figure markdown="1">
-![](../assets/classifier-pixel-workflow.png)
+![]({{site.baseurl}}/assets/classifier-pixel-workflow.png)
 <figcaption>
 Classifier to Pixel Workflow in Rodan
 </figcaption>

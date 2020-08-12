@@ -11,4 +11,4 @@ Depending on the resources that are already available, it might be possible to s
 
 If you're already familiar with Rodan and have an idea of how optical music
 recognition works, then feel free to start.
-Otherwise you might want to read the [overview of Rodan](/overview/rodan) and [the other overview pages](/overview).
+Otherwise you might want to read the [overview of Rodan]({{site.baseurl}}/overview/rodan) and [the other overview pages]({{site.baseurl}}/overview).

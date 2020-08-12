@@ -16,7 +16,7 @@ The workflow present in Rodan and discussed here is segmented into four stages[^
 4. Symbolic Score Generation and Correction
 
 <figure markdown="1">
-![](assets/omr_stages.png)
+![]({{ "/assets/omr_stages.png" | prepend:site.baseurl }})
 <figcaption>
 Stages of the OMR Process (Vigliensoni et al. 2019)
 </figcaption>
