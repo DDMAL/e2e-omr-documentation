@@ -5,7 +5,7 @@ parent: OMR Tutorial
 nav_order: 1
 ---
 
-*Note: This tutorial uses [McGill MS-73](https://archive.org/details/McGillLibrary-rbsc_ms-medieval-073-18802).*
+*Note: This tutorial uses [CDN-Mlr 073](https://archive.org/details/McGillLibrary-rbsc_ms-medieval-073-18802).*
 
 # Image Layering
 
@@ -15,7 +15,7 @@ This process is time consuming and can be sped up if you have a model already
 trained on a similar manuscript.
 In this case, [models from the Salzinnes manuscript](https://github.com/DDMAL/Calvo-classifier/tree/develop/Models/01-square-notation/02-three-pages-val-acc-20-epochs/models) can be used.
 
-In this example we are using pages 40, 230, and 176 from MS-73. Layers were created
+In this example we are using pages 40, 230, and 176 from CDN-Mlr 073. Layers were created
 using Pixelmator and then loaded into Pixel.js to create the background and
 selected regions layers and ensure all layers were masks by setting the
 generate masks setting to "true".
@@ -69,5 +69,5 @@ We will use this for our example with the following settings:
 
 After testing that the models work on a page that it was trained on (e.g., page 176)
 it is time to use them on another page from the same manuscript. Here,
-page 40 of MS-73 is used. The "Fast Pixelwise Classifier" job is run on the page scaled down to 52.2% of the original size with the default settings.
+page 40 of CDN-Mlr 073 is used. The "Fast Pixelwise Classifier" job is run on the page scaled down to 52.2% of the original size with the default settings.
 Three of the layers generated &mdash; music symbols, staff lines, and text &mdash; are used in future steps.

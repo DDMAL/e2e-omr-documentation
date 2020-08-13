@@ -14,7 +14,7 @@ which has subpages on the different steps of the process.
 Each subpage goes into detail on specific jobs that accomplish that task.
 Additionally there is a [general overview of Rodan]({{ "/overview/rodan" | prepend:site.baseurl }}).
 
-A brief tutorial of performing OMR using the [McGill MS-73 manuscript](https://archive.org/details/McGillLibrary-rbsc_ms-medieval-073-18802)
+A brief tutorial of performing OMR using the [CDN-Mlr 073 manuscript](https://archive.org/details/McGillLibrary-rbsc_ms-medieval-073-18802)
 as an example is present on the [tuorial pages]({{ "/tutorial" | prepend:site.baseurl }}).
 
 # What Do I Need To Get Started?

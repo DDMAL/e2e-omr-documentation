@@ -20,7 +20,7 @@ So when this happens, you need to download the images.
 # Downloading Images from a Manifest
 
 IIIF documents are referenced by a URL.
-For this example, we will be working with the McGill MS-73 manuscript
+For this example, we will be working with the CDN-Mlr 073 manuscript
 which has a IIIF Presentation manifest at <https://iiif.archivelab.org/iiif/McGillLibrary-rbsc_ms-medieval-073-18802/manifest.json>.
 
 This can be downloaded using a graphical program like the one at <https://github.com/JRegimbal/iiif-downloader> or a smaller command line program like <https://github.com/ryanfb/iiif-dl>.
