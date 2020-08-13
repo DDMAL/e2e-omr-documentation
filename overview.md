@@ -33,7 +33,17 @@ classifying other images.
 
 ## Symbol Classification
 
-Classifier, Interactive Classifier, Biollante.
+The music symbols found using the models in the previous step are turned
+into connected components or glyphs. Each of these connected components
+are then classified as different elements (e.g., C clef, custos, punctum).
+This requires training data for each of the different classes, which can
+be generated from the data itself using the Interactive Classifier or
+if the data already exists the classification can occur noninteractively.
+
+As classification occurs using k-nearest neighbor classification across
+different features, there are some features that may be more salient
+than others. Feature selection can be performed using the Biollante job,
+which performs optimization using a genetic algorithm.
 
 ## Music Reconstruction and Encoding
 
