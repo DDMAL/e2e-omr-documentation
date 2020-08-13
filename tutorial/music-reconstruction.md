@@ -50,3 +50,16 @@ The button "CSV export" will download the necessary file.
 3. Open the CSV file in a program like Microsoft Excel or LibreOffice Calc.
 4. Locate the row corresponding to the folio of the page.
 5. Copy the text in that row under the heading `fulltext_ms` to a plain text (`.txt`) file. This is the input for the text alignment job.
+
+The text alignment job also requires an OCR model. This can be generated
+by following [the instructions on the job's repository](https://github.com/DDMAL/text-alignment#training-a-new-ocropus-model).
+Example models are also available under the models folder the repository.
+
+<figure markdown="1">
+![]({{site.baseurl}}/assets/workflow-with-text.png)
+<figcaption>
+The workflow after patchwise layer classification with text alignment.
+An additional branch is added leading to the MEI Encoding job
+where text alignment occurs.
+</figcaption>
+</figure>
