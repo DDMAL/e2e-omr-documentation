@@ -48,8 +48,11 @@ steps can be used to obtain the text for a page:
 The button "CSV export" will download the necessary file.
 ![An example page of a source in Cantus. A box is drawn around the section containing download options.]({{site.baseurl}}/assets/cantus-source.png)
 3. Open the CSV file in a program like Microsoft Excel or LibreOffice Calc.
-4. Locate the row corresponding to the folio of the page.
-5. Copy the text in that row under the heading `fulltext_ms` to a plain text (`.txt`) file. This is the input for the text alignment job.
+4. Locate the row or rows corresponding to the folio of the page.
+Often the last chant from the previous folio will continue onto this page,
+so it may be helpful to include that text as well.
+*The text alignment job will discard text not found on the page.*
+5. Copy the text in the row(s) under the heading `fulltext_ms` to a plain text (`.txt`) file. This is the input for the text alignment job.
 
 The text alignment job also requires an OCR model. This can be generated
 by following [the instructions on the job's repository](https://github.com/DDMAL/text-alignment#training-a-new-ocropus-model).
