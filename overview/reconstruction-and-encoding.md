@@ -7,11 +7,6 @@ nav_order: 3
 
 # Text Alignment
 
-### Settings
-
-* **MEI Version** - The MEI version to encode. Either 4.0.0 or 3.9.9. 3.9.9 refers to the
-old non-standard encoding used by Neon and is default.
-
 ### Input Ports
 
 * **Text Layer** - The layer of text in the source image.
