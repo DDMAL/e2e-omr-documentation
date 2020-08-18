@@ -17,7 +17,7 @@ The easiest way to produce this kind of CSV file is through the
 can also be manually created through a tool like Microsoft Excel or
 LibreOffice Calc.
 
-If text alignment data is provided, the encoding job will attempt to match
+If text alignment data is provided, the MEI Encoding job will attempt to match
 the text to neumes and group them as syllables. Otherwise there will be
 one syllable in the entire staff.
 For grouping neume components into neumes, a heuristic is used based on the
