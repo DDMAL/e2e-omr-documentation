@@ -14,7 +14,7 @@ For this, the Interactive Classifier can be used.
 
 # Steps Before the Interactive Classifier
 
-The Interactive (and regular) Classifier require connected components, not
+The Interactive (and Non-Interactive) Classifier require connected components, not
 just masks extracted from the source image. These are created by the
 "CC Analysis" job which takes a cleaned-up black-and-white PNG image.
 Optionally, a step could be inserted between the CC Analysis job and
@@ -49,13 +49,13 @@ This approach is typically better for square-notation documents as it is
 possible to quickly get much more training data for the smaller set of
 classes compared to the many possible neumes that can appear.
 
-## Using the (Non-Interactive) Classifier
+## Using the Non-Interactive Classifier
 
 The Interactive Classifier is wonderful for getting started, but it would be
 much more convenient (and faster) to use an automated classifier that
 already recognizes the different classes. Luckily, the Interactive Classifier
 allows us to prepare the resources for this. There is a non-interactive
-classifier job (just called "Classifier") which takes a set of connected
+classifier job which takes a set of connected
 components to classify, much like the Interactive Classifier, but also
 requires a set of training data used to classify the connected components.
 It can also optionally accept a set of feature weights produced by Biollante.
@@ -73,5 +73,5 @@ training data. Training data can be obtained from the Interactive Classifier
 through an optional output port.
 
 After Biollante is run (for details see [the overview page on it and links there]({{site.baseurl}}/overview/classification#biollante)), feature weights or selections are generated.
-These can be used as inputs to the non-interactive Classifier job along with
+These can be used as inputs to the Non-Interactive Classifier job along with
 training data and unclassified connected components.

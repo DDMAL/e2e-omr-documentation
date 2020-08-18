@@ -64,15 +64,15 @@ The job has the following input and output ports. Optional input ports are in *i
 * **Class Names** - The class and subclass names used during classification.
 * **Classified Glyphs** - The glyphs classified as part of the job.
 
-# (Non-Interactive) Classifier
+# Non-Interactive Classifier
 
-The Classifier job is based on the non-interactive Gamera classifier.
+The Non-Interactive Classifier job is based on the non-interactive Gamera classifier.
 Instead of iteratively classifying glyphs and generating training data
 like the Interactive Classifier, this job requires training data as an
 input and then classifies a provided set of connected components *without*
 user input.
 
-## Classifier Ports
+## Non-Interactive Classifier Ports
 
 ### Input Ports
 
