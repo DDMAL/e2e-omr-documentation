@@ -33,7 +33,8 @@ and text layers.
 
 The dimensions of the files differed slightly, so background values to fill gaps
 needed to be specified. The full images were
-taken with a black background, and so "black" was used there. For the masks,
+taken with a black background, and so "black" was used as the background color for gaps
+when those images were combined. For the masks,
 the keyword "none" was used to fill any gaps with transparent pixels.
 So, for example with the full images:
 ```bash
