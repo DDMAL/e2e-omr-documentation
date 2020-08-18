@@ -15,7 +15,7 @@ where to get a set of images and how to display them to the user.
 This is excellent if you're using a IIIF-aware application,
 [of which there are many](https://iiif.io/apps-demos/),
 but sadly Rodan isn't one of them (yet).
-So when this happens, you need to download the images.
+So, when this happens, you need to download the images.
 
 # Downloading Images from a Manifest
 
@@ -23,7 +23,7 @@ IIIF documents are referenced by a URL.
 For this example, we will be working with the CDN-Mlr 073 manuscript
 which has a IIIF Presentation manifest at <https://iiif.archivelab.org/iiif/McGillLibrary-rbsc_ms-medieval-073-18802/manifest.json>.
 
-This can be downloaded using a graphical program like the one at <https://github.com/JRegimbal/iiif-downloader> or a smaller command line program like <https://github.com/ryanfb/iiif-dl>.
+The images from a IIIF manifest can be downloaded using a graphical program like the one at <https://github.com/JRegimbal/iiif-downloader> or a smaller command line program like <https://github.com/ryanfb/iiif-dl>.
 
 ![IIIF Downloader App]({{site.baseurl}}/assets/iiif-downloader-main.png)
 
