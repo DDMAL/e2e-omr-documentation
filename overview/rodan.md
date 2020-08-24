@@ -32,3 +32,20 @@ As a user of Rodan, the most important aspect is the client, however there are p
 5. Start the workflow.
 6. Provide user input for interactive jobs. This is necessary when a run job's status is "waiting for user input."
 7. Check and download output resources.
+
+# Extra Notes on Rodan Usage
+
+## Running the Same Workflow with Different Resources
+
+Often a user will want to run the same jobs in the same order, but on different resources.
+Typically this would come when all the resources needed to run the OMR process exist and
+many pages of a manuscript need to be encoded. There are two different ways to start multiple
+instances of the same workflow with different resources:
+
+1. If only one input port's resource changes between runs, multiple resources can be assigned
+to it. Workflow runs will be spawned with each of the different resources assigned to that
+input port.
+2. If multiple input ports' resources change between runs, then the resources for each run
+must be assigned to the input ports. *The same number of resources must be assigned to each
+input port that has more than one resource assigned and the n<sup>th</sup> resource of each
+port will be in the same workflow run.*
