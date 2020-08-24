@@ -49,3 +49,5 @@ input port.
 must be assigned to the input ports. *The same number of resources must be assigned to each
 input port that has more than one resource assigned and the n<sup>th</sup> resource of each
 port will be in the same workflow run.*
+    * For resources that should be kept the same between jobs, just assign one resource to
+    the input port. It will be used in all the workflow runs generated.
