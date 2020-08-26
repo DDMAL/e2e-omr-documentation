@@ -1,6 +1,7 @@
 ---
 layout: default
 title: OMR Tutorial
+nav_order: 2
 has_children: true
 ---
 
