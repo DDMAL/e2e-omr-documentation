@@ -23,7 +23,7 @@ track of important resources. Labels can be added when resources are uploaded by
 tag box next to the upload button, or after uploading by selecting the resource(s) and then
 entering the labels in the detailed view to the right of the screen.
 
-![Label input next to the upload button]({{site.baseurl}}/assets/label.png)
+![Label input next to the upload button]({{site.baseurl}}/assets/label.png){:width="75%"}
 
 Labels are separated by commas and can contain alphanumeric characters and many special characters.
 The Labeler job can be used to add a label to resources produced in a workflow.
