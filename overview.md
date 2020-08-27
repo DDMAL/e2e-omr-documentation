@@ -22,39 +22,47 @@ Stages of the OMR Process (Vigliensoni et al. 2019)
 </figcaption>
 </figure>
 
-There are different jobs in Rodan meant for each job.
+OMR systems designed to process modern printed music notation can depend on general models
+for interpreting music symbols and score structure. Rather than apply a single standard decoding
+process, the Rodan workflow is tuned at each stage to facilitate the interpretation of handwritten
+scores and manuscripts in less common notations.
+
+There are different jobs in Rodan meant for each stage.
 
 ## Document Analysis
 
-Document analysis involves certain generic image preprocessing jobs, such as those based on actions in [Pillow](https://python-pillow.org/) and [Gamera](https://gamera.informatik.hsnr.de/).
-There is also the Pixel.js[^2] job, for separating regions of a source image into different layers (e.g., background, staff lines, text, and music elements), and
-the Pixelwise and Patchwise trainer jobs[^3]. These jobs take the layers produced by Pixel and use them to train a model for
-classifying other images.
+Document analysis involves certain generic image preprocessing jobs, such as those based on actions in [Pillow](https://python-pillow.org/) (e.g., image resizing) and [Gamera](https://gamera.informatik.hsnr.de/) (e.g., de-speckling).
+The Pixel.js[^2] job, allows a user to separate regions of a manuscript page into different layers (e.g., background, staff lines, text, and music elements).
+The Pixelwise and Patchwise trainer jobs[^3] take the layers produced by Pixel and use them to train a model for
+automatically separating layers in other images, specifically other pages from the same manuscript.
 
 ## Symbol Classification
 
-The music symbols found using the models in the previous step are turned
-into connected components or glyphs. Each of these connected components
-are then classified as different elements (e.g., C clef, custos, punctum).
-This requires training data for each of the different classes, which can
-be generated from the data itself using the Interactive Classifier or
-if the data already exists the classification can occur noninteractively.
+The music symbol layers found using the models in the previous step are broken
+into a collection of connected components or glyphs. Each of these connected components
+are then classified as score elements (e.g., C clef, custos, punctum).
+This requires training data for each of the different classes, a set of
+sample glyphs for each type of element to be identified. If prepared training data already
+exists, it can be used to classify glyphs non-interactively. Else, training data can be
+created from a manuscript page using the Interactive Classifier.
 
 As classification occurs using k-nearest neighbor classification across
-different features, there are some features that may be more salient
+different features, there are some image features that may be more salient
 than others. Feature selection can be performed using the Biollante job,
 which performs optimization using a genetic algorithm.
 
 ## Music Reconstruction and Encoding
 
-With symbols grouped into broad categories (staff lines, text, music symbols) and then into more precise categories as necessary (C clefs, custodes, punctums, etc.) other values can be assigned to these symbols.
+Once music symbols are classified by shape (C clefs, custodes, punctums, etc.), their meaning
+can be further interpreted from their relative positions in the source image.
 The jobs for this involve finding staves ([Miyao Staff Finding](https://github.com/DDMAL/gamera_rodan)), finding the pitches of musical elements ([Heuristic Pitch Finding](https://github.com/DDMAL/heuristic-pitch-finding)), and aligning a plaintext version of text on the page to the actual text glyphs ([Text Alignment](https://github.com/DDMAL/text_alignment)).
 
 ## Symbolic Score Generation and Correction
 
-The [MEI Encoding](https://github.com/DDMAL/MEI_encoding) job takes the data from the previous jobs and encodes them into the [MEI](https://music-encoding.org) format.
+The [MEI Encoding](https://github.com/DDMAL/MEI_encoding) job takes the outputs of this music
+encoding process and translates them into the [MEI](https://music-encoding.org) format.
 
-Following MEI generation, [Neon](https://github.com/DDMAL/Neon) can be used to correct errors in the OMR process for square-notation manuscripts.
+Following MEI generation, the browser-based graphical interface [Neon](https://github.com/DDMAL/Neon) can be used to correct errors in the OMR process for square-notation manuscripts.
 
 ## Footnotes
 
