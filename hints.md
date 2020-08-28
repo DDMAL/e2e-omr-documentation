@@ -27,3 +27,15 @@ entering the labels in the detailed view to the right of the screen.
 
 Labels are separated by commas and can contain alphanumeric characters and many special characters.
 The Labeler job can be used to add a label to resources produced in a workflow.
+
+## Selecting Multiple Resources
+
+Rodan makes it possible to select and manage multiple resources at a time. Hold the `Control` key
+(`Command` on macOS) and click multiple resources to select them. It's also possible to select
+a resource, hold `Shift`, and click another resource to select all the resources in the list between
+those two resources and the resources themselves.
+
+When multiple resources are selected it's possible to change attributes that already have the
+same value (i.e., file type and labels) and perform actions available on all the resources
+(e.g., delete, download). It's not perfect, but it helps save time when going through resources
+in Rodan.
