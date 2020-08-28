@@ -7,9 +7,10 @@ nav_order: 4
 
 # Score Generation &mdash; MEI Encoding
 
-Score generation is performed with the [MEI encoding](https://github.com/DDMAL/MEI_encoding) job.
-This job uses the information produced in the reconstruction and encoding steps to create a valid symbolic document.
-Glyphs are matched to MEI snippets and pitch data is applied if applicable.
+Score generation is performed with the [MEI encoding](https://github.com/DDMAL/MEI_encoding) job, tailored for
+interpreting neume notation.
+This job uses the information produced in the reconstruction and encoding OMR stages to create a valid symbolic music document.
+Glyphs are matched to MEI snippets and pitch information is applied where appropriate.
 
 If text alignment was performed, textual information is also included and used to group neumes into syllables complete with text.
 
@@ -31,9 +32,9 @@ from the [Text Alignment job]({{site.baseurl}}/overview/reconstruction-and-encod
 
 # Score Correction &mdash; Neon
 
-For square-notation scores, correction is performed using the [Neon](https://github.com/DDMAL/Neon/) (*Neume Editor Online*) job.
+For square-notation scores, corrections to the OMR-generated MEI file can be performed using the [Neon](https://github.com/DDMAL/Neon/) (*Neume Editor Online*) job.
 This works by displaying the source image in the background and rendering the contents determined by OMR in the foreground,
-allowing errors to be easily perceived and corrected by the user[^1].
+allowing errors to be easily noticed and corrected by the user[^1].
 Detailed instructions on how to use Neon can be found on [the instructions page of its wiki](https://github.com/DDMAL/Neon/wiki/Instructions).
 Note that only single-page mode is present on the Rodan job of Neon.
 

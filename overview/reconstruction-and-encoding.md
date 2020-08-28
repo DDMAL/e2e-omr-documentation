@@ -19,7 +19,7 @@ nav_order: 3
 
 # Miyao Staff Finding
 
-This performs the Miyao staff finding algorithm.
+This job performs the Miyao staff finding algorithm.
 It finds the staves in an image of staves.
 Note that this is **not** the job called "Miyao Staff Find*er*" as that job has different settings and produces a different output.
 
