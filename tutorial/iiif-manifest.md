@@ -7,10 +7,11 @@ nav_order: 0
 
 # What is a IIIF Manifest anyway?
 
-[IIIF](https://iiif.io) describes numerous ways to work with images.
+The [International Image Interoperability Framework](https://iiif.io) (IIIF, pronounced "triple-I-F")
+describes numerous ways to work with images.
 In this tutorial, "IIIF manifest" refers specifically to a IIIF Presentation API manifest.
 This is, in short, a machine readable file that contains information on
-where to get a set of images and how to display them to the user.
+where to get a set of images online and how to display them to the user.
 
 This is excellent if you're using a IIIF-aware application,
 [of which there are many](https://iiif.io/apps-demos/),

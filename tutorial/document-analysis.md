@@ -9,23 +9,25 @@ nav_order: 1
 
 # Image Layering
 
-It's usually necessary to create a new model to split images into layers.
-This can be done using [Pixel.js]({{site.baseurl}}/overview/document-analysis#pixeljs) or a desktop program like [Pixelmator](http://www.pixelmator.com/).
-This process is time consuming and can be sped up if you have a model already
-trained on a similar manuscript.
-In this case, [models from the Salzinnes manuscript](https://github.com/DDMAL/Calvo-classifier/tree/develop/Models/01-square-notation/02-three-pages-val-acc-20-epochs/models) can be used.
+OMR requires the complicated mixture of information in a manuscript image
+to be separated in specific layers (e.g., staff lines, background, text, music symbols).
+Manual layer separation can be performed using [Pixel.js]({{site.baseurl}}/overview/document-analysis#pixeljs) or a desktop program like [Pixelmator](http://www.pixelmator.com/),
+however this process is time consuming. Layer separation can be sped up if you have a model already
+by preparing layers with a model already trained on a simliar manuscript, allowing the user
+to make corrections to pre-classified pixels instead of starting from scratch.
+For this tutorial with CDN-Mlr 073, [models from the Salzinnes manuscript](https://github.com/DDMAL/Calvo-classifier/tree/develop/Models/01-square-notation/02-three-pages-val-acc-20-epochs/models) (CDN-Hsmu M2149.L40) can be used.
 
 In this example we are using pages 40, 230, and 176 from CDN-Mlr 073. The layers of these three images were created
 using Pixelmator, exported as RGBA PNG images with parts of the image not in each layer made transparent,
 and then loaded into Pixel.js to create the background and
-selected regions layers. These genreated layers are necessary for
-model training in Rodan.
-Additionally, all layers from pixel were exported as masks by setting the
+selected regions layers.
+The layers from Pixel.js were exported as masks for model training in Rodan by setting the
 generate masks setting to "true".
 
-The files were then combined using [Image Magick](https://imagemagick.org).
-This is necessary because the [Patchwise Trainer]({{site.baseurl}}/overview/document-analysis#patchwise-trainer)
-can only receive one image and its layers. The only way to train on multiple pages
+The files for these three pages were then combined using [Image Magick](https://imagemagick.org)
+to make one image and its layers, necessary for
+the [Patchwise Trainer]({{site.baseurl}}/overview/document-analysis#patchwise-trainer).
+The only way to train on multiple pages
 is to combine them all into a single image and do the same for each type of layer.
 The more layered pages that are provided to the Patchwise Trainer, the more data
 it has to train on to segment the document into the background, music symbols, staff lines,
@@ -36,7 +38,7 @@ needed to be specified. The full images were
 taken with a black background, and so "black" was used as the background color for gaps
 when those images were combined. For the masks,
 the keyword "none" was used to fill any gaps with transparent pixels.
-So, for example with the full images:
+To combine the images with Image Magick commands:
 ```bash
 convert -background black _A_15th_century_Italian_antiphonal___manuscript__0_40_0.jpg \
 _A_15th_century_Italian_antiphonal___manuscript__0_230_0.jpg \
@@ -64,6 +66,8 @@ convert 40-230-176.jpg -resize 52.2% 40-230-176-Resized.jpg
 ```
 
 These combined and resized files were uploaded back to Rodan for the next step.
+To upload resources to Rodan, create or enter a project, click the "Resources" button, and
+then click "Upload Resource(s)" to select resources to upload.
 
 # Model Training
 

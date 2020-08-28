@@ -8,7 +8,7 @@ nav_order: 3
 
 ## Staff Size Height and Training
 
-The Calvo classifier and trainer jobs perform differently based on the size of images.
+The Calvo classifier and trainer jobs are sensitive to the size of images.
 For music with staves, the distance between staff lines in pixels (*staff size height*)
 tends to be a predictor of how well it will perform. For instance with the original
 CDN-Hsmu M2149.L4 images the staff size height is 64 px.

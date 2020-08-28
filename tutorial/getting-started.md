@@ -11,8 +11,8 @@ nav_order: -1
 
 Relatively up-to-date versions of Rodan can be found on the [staging site](https://rodan-staging.simssa.ca)
 and [the new production site](https://rodan2.simssa.ca). A guest account with the username and password
-"guest" is present on the staging site, but materials associated with this account may be deleted at any time
-and it would be ideal for you to obtain your own account by contacting <mailto:ddmal.lab.manager@gmail.com>.
+"guest" is present on the staging site for new users trying out the system. As materials associated with this account may be deleted at any time,
+anyone interested in using Rodan for OMR projects should contact <mailto:ddmal.lab.manager@gmail.com>.
 
 For chant manuscripts and related information, the [Cantus database](http://cantus.uwaterloo.ca/) is a must
 to consult. The [Cantus Ultimus project](https://cantus.simssa.ca/) contains a subset of manuscripts from

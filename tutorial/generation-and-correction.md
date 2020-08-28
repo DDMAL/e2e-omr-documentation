@@ -15,9 +15,9 @@ to an MEI fragment that represents it (e.g., `<neume><nc/></neume>`).
 The easiest way to produce this kind of CSV file is through the
 [MEI mapping tool](https://github.com/DDMAL/MEI-mapping-tool), although it
 can also be manually created through a tool like Microsoft Excel or
-LibreOffice Calc.
+LibreOffice Calc with careful formatting.
 
-If text alignment data is provided, the MEI Encoding job will attempt to match
+If text alignment data is provided, the MEI Encoding job will also attempt to match
 the text to neumes and group them as syllables. Otherwise there will be
 one syllable in the entire staff.
 For grouping neume components into neumes, a heuristic is used based on the

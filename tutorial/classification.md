@@ -19,13 +19,14 @@ For this, the Interactive Classifier can be used.
 The Interactive (and Non-Interactive) Classifier requires connected components, not
 just masks extracted from the source image. These are created by the
 "CC Analysis" job which takes a cleaned-up black-and-white PNG image.
-Optionally, the Diagonal Neume Slicing job can be inserted between the CC Analysis job and
+
+For manuscripts wit diagonal neumes, the Diagonal Neume Slicing job can be inserted between the CC Analysis job and
 Interactive Classifier job where [Diagonal Neume Slicing](https://github.com/DDMAL/diagonal-neume-slicing)
-is run to split neumes into neume components more often, reducing the number of classes to be classified.
+is run to split compound neumes into neume components, reducing the number of glyph classes to be classified.
 
 ![Workflow until Interactive Classifier]({{site.baseurl}}/assets/workflow-to-ic.png)
 
-Above is a workflow containing the jobs necessary to prepare the inputs for the Interactive Classifier.
+Above is a Rodan workflow containing the jobs necessary to prepare the inputs for the Interactive Classifier.
 
 # Interactive Classification
 
@@ -35,20 +36,22 @@ element types. Typically, the naming of these classes follows a hierarchy.
 For example, a C clef would be classified as `clef.c` and a punctum would be
 classified as `neume.punctum`. However a custos would simply be `custos`.
 
-The names of these classes should correspond to names in a CSV file for use in the MEI Encoding job that can be produced by the [MEI Mapping Tool](https://github.com/DDMAL/mei-mapping-tool).
+The names of these classes must correspond to names in the mapping file (CSV) to be used in the MEI Encoding job.
+Such a mapping file can be produced with the [MEI Mapping Tool](https://github.com/DDMAL/mei-mapping-tool).
 
-In addition to the symbols that actually should be classified, there will
-likely still be specks that should be ignored. Rather than attempting to
-delete all of these, an alternate approach is to just classify them as
+Even with good layer separation, there will still be specks around the
+music symbols of interest, and these
+should be ignored. Rather than attempting to
+these small connected components by hand, an alternate approach is to just classify them as
 `skip` so they are detected and filtered out by the
 [automatic classification phase(s)](https://github.com/DDMAL/Interactive-Classifier/wiki/Architecture#automatic-classification-stage).
-Otherwise the classifier would attempt to classify them as something like a clef or neume, regardless of the confidence level.
+Otherwise the classifier will attempt to classify them as something like a clef or neume, regardless of the confidence level.
 
 There are two main ways of classifying neumes: a neume-based approach and
 a neume component-based approach. The former will attempt to classify entire
 neumes (e.g., `neume.clivis.3`) [as described on the Interactive Classifier wiki](https://github.com/DDMAL/Interactive-Classifier/wiki/Classifying-Square-Notes).
-The latter approach uses the diagonal neume slicing job first to then only
-classify neume components by the shape of the note head (e.g., `neume.inclinatum`), handling neume grouping later in the workflow.
+The latter approach uses the diagonal neume slicing job and then only
+classifies neume components by the shape of the note head (e.g., `neume.inclinatum`), handling neume grouping later in the workflow.
 This approach is typically better for square-notation documents as it is
 possible to quickly get much more training data for the smaller set of
 neume component classes compared to the many possible neumes that can exist.
