@@ -7,11 +7,15 @@ nav_order: 3
 
 # Text Alignment
 
+The [Text Alignment](https://github.com/DDMAL/text_alignment) job aligns a provided transcript of
+neumed text or lyrics on a page to the text that appears on the page itself by using optical
+character recognition (OCR) and the [Needleman-Wunsch algorithm](https://en.wikipedia.org/wiki/Needleman%E2%80%93Wunsch_algorithm).
+
 ### Input Ports
 
 * **Text Layer** - The layer of text in the source image.
 * **Transcript** - A transcript of the text on the page.
-* **OCR Model** - An ocropus OCR model.
+* **OCR Model** - An OCRopus OCR model.
 
 ### Output Ports
 
