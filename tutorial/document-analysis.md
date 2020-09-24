@@ -33,22 +33,23 @@ The more layered pages that are provided to the Patchwise Trainer, the more data
 it has to train on to segment the document into the background, music symbols, staff lines,
 and text layers.
 
-The dimensions of the files differed slightly, so background values to fill gaps
-needed to be specified. The full images were
+To cmobine the images (and layers), we used the software Image Magick. The dimensions of the files differed slightly, so background values to fill gaps
+needed to be specified to the software. The full images were
 taken with a black background, and so "black" was used as the background color for gaps
-when those images were combined. For the masks,
-the keyword "none" was used to fill any gaps with transparent pixels.
-To combine the images with Image Magick commands:
+when those images were combined. This can be seen in the next code snippet, where the images of three folios are combined into a single file (`40-230-176.png`).
 ```bash
 convert -background black _A_15th_century_Italian_antiphonal___manuscript__0_40_0.jpg \
 _A_15th_century_Italian_antiphonal___manuscript__0_230_0.jpg \
 _A_15th_century_Italian_antiphonal___manuscript__0_176_0.jpg -append 40-230-176.jpg
 ```
-Similarly for the text layers:
+For the masks,
+the keyword "none" was used to fill any gaps with transparent pixels.
+This is shown in the next code snippet for combining the text layers of three folios into one file
+(`40-230-176-Text.png`).
 ```bash
 convert -background none _A_15th_century_Italian_antiphonal___manuscript__0_40_Text.png \
 _A_15th_century_Italian_antiphonal___manuscript__0_230_Text.png \
-_A_15th_century_Italian_antiphonal___manuscript__0_176_Text.png -append 40-230-175-Text.png
+_A_15th_century_Italian_antiphonal___manuscript__0_176_Text.png -append 40-230-176-Text.png
 ```
 <figure markdown="1">
 ![Combined Image of Neume Layers]({{site.baseurl}}/assets/40-230_Neumes.png){:width="275"}
