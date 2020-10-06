@@ -7,28 +7,28 @@ nav_order: 0
 # Optical Music Recognition with Rodan
 
 This site describes the *Optical Music Recognition*
-(OMR) process implemented by [Distributed Digital Music Archives and Libraries](https://ddmal.music.mcgill.ca/) (DDMAL) lab
+(OMR) process implemented by the [Distributed Digital Music Archives and Libraries](https://ddmal.music.mcgill.ca/) (DDMAL) lab
 for encoding manuscripts in the [Music Encoding Initiative](https://music-encoding.org) format.
-It demonstrates the [Rodan workflow manager](https://ddmal.music.mcgill.ca/Rodan)
+It demonstrates the [Rodan workflow builder and manager](https://ddmal.music.mcgill.ca/Rodan)
 and stages of processing for interpreting and encoding square-notation music with machine learning.
 
-General information about OMR is available on the [main overview page]({{ "/overview" | prepend:site.baseurl}})
-which has subpages on the different steps of the process.
-Each subpage goes into detail on specific jobs that accomplish that task.
-Additionally there is a [general overview of Rodan]({{ "/overview/rodan" | prepend:site.baseurl }}).
+General information about OMR is available on the [main overview page]({{ "/overview" | prepend:site.baseurl}}),
+which also includes subpages on the different steps of the OMR process.
+Each subpage goes into detail on specific jobs that accomplish a specific task.
+Additionally, there is a [general overview of Rodan]({{ "/overview/rodan" | prepend:site.baseurl }}).
 
 New users can follow a brief tutorial of performing OMR using the [CDN-Mlr 073 manuscript](https://archive.org/details/McGillLibrary-rbsc_ms-medieval-073-18802)
-as an example is present on the [tuorial pages]({{ "/tutorial" | prepend:site.baseurl }}).
+as an example, which is available in the [tutorial pages]({{ "/tutorial" | prepend:site.baseurl }}).
 
 # What Do I Need To Get Started?
 
 ## Hardware and Software
 
-Rodan is a web app and therefore doesn't require you install anything, but for the best experience it's recommended
+Rodan is a web app and therefore doesn't require you to install anything, but for the best experience, it's recommended
 that you use a recent version of Google Chrome or Firefox and use a computer with at least 8 GB of RAM.
-However everything should work on a modern computer using a recent version of a major browser.
+However, everything should work on a modern computer using a recent version of a popular browser.
 
-To generate some resources like the OCR models, it may be necessary to install other software like [Python](https://www.python.org/).
+It may be necessary to generate some resources locally (e.g., like the Optical Character Recognition models.) Instructions to create these files are available with the jobs documentation.
 
 ## Digital Resources
 
@@ -36,7 +36,7 @@ This largely depends on your goals, but if you intend to create an encoding
 of a page or a few pages in the [Music Encoding Initiative (MEI)](https://music-encoding.org)
 format, you'll need the following materials:
 
-1. High quality images of the manuscript pages;
+1. High-quality images of the manuscript pages;
     * For instructions on obtaining images, consult the [tutorial section on IIIF]({{ "/tutorial/iiif-manifest" | prepend:site.baseurl }}).
 2. Computational models trained to detect score elements in this kind of manuscript: staff lines, text, and music symbols.
     * Consult the [tutorial section on document analysis]({{ "/tutorial/document-analysis" | prepend:site.baseurl }})
