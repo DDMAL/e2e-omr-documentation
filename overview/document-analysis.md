@@ -84,23 +84,22 @@ Note that the number of samples per class also affects memory utilization.
 
 * **Image** - The image to use for training and whose layers will be provided.
 * **Background layer** - The mask for the background layer.
-* **Music symbol layer** - The mask for the music symbol layer.
-* **Staff lines layer** - The mask for the staff lines layer.
-* **Text layer** - The mask for the text layer.
 * **Selected regions** - The mask for regions of the image that were manually classified into layers.
+* **Layer 0** - The mask for the foreground layer. This layer is usually used for the symbols to be classified in the [classification step](./classification.md). In the case of OMR, this layer tends to be the 'music-symbol' layer.
+* *Layer Inputs* - Some number of layers (layer 1–9) can be added as inputs. 
 
 ### Output Ports
 
 * **Background Model** - The model for the background.
-* **Music Symbol Model** - The model for music symbols (e.g., neumes, custodes, clefs).
-* **Staff Lines Model** - The model for staff lines.
-* **Text Model** - The model for text.
-* *Log File* - A file containing the information logged by the job.
+* **Model 0** - The model corresponding to layer 0.
+* *Model Outputs* - Some number of models (model 1–9) can be added as outputs. These nine optional output models correspond to the nine optional input layers (layer 1–9).
+
+*Example: When segmenting the document into music-symbol, staff-lines, and text layers, the required input layer 0 can be used for the music symbol layer, and layers 1 and 2 can be added for the staff-lines and text layers, respectively. In this case, the output model 0 would be the classification model for music symbols; model 1 would correspond to the staff-line classification model; and model 2 would be the text classification model.*
 
 ## HPC Patchwise Trainer
 
 [This job](https://github.com/DDMAL/hpc-fast-trainer) runs the trainer discussed above on the Compute Canada Cedar
-cluster. It can only be run from staging as of now, but it provides access to more resources than available on the cloud.
+cluster. It provides access to more resources than the ones available on the cloud.
 
 ### Settings
 
@@ -115,17 +114,17 @@ Since resource limits must be specified a priori on the clusters, the following 
 
 * **Image** - The image to use for training and whose layers will be provided.
 * **Background layer** - The mask for the background layer.
-* **Music symbol layer** - The mask for the music symbol layer.
-* **Staff lines layer** - The mask for the staff lines layer.
-* **Text layer** - The mask for the text layer.
 * **Selected regions** - The mask for regions of the image that were manually classified into layers.
+* **Layer 0** - The mask for the foreground layer. This layer is usually used for the symbols to be classified in the [classification step](./classification.md). In the case of OMR, this layer tends to be the 'music-symbol' layer.
+* *Layer Inputs* - Some number of layers (layer 1–9) can be added as inputs. 
 
 ### Output Ports
 
 * **Background Model** - The model for the background.
-* **Music Symbol Model** - The model for music symbols (e.g., neumes, custodes, clefs).
-* **Staff Lines Model** - The model for staff lines.
-* **Text Model** - The model for text.
+* **Model 0** - The model corresponding to layer 0.
+* *Model Outputs* - Some number of models (model 1–9) can be added as outputs. These nine optional output models correspond to the nine optional input layers (layer 1–9).
+
+*Example: When segmenting the document into music-symbol, staff-lines, and text layers, the required input layer 0 can be used for the music symbol layer, and layers 1 and 2 can be added for the staff-lines and text layers, respectively. In this case, the output model 0 would be the classification model for music symbols; model 1 would correspond to the staff-line classification model; and model 2 would be the text classification model.*
 
 ## Fast Pixelwise Classifier
 
@@ -143,14 +142,12 @@ or background.
 
 * **Image** - An image whose pixels are to be classified.
 * **Background Model** - The model for the background.
-* **Music Symbol Model** - The model for music symbols.
-* **Staff Lines Model** - The model for staff lines.
-* **Text Model** - The model for text.
+* **Model 0** - The model corresponding to layer 0.
+* *Model Inputs* - Some number of models (model 1–9) can be added as inputs. These nine optional input models correspond to the nine optional output models of the [trainer part](#patchwise-trainer).
 
 ### Output Ports
 
-* *Background* - The pixels classified as background.
-* *Music symbol* - The pixels classified as music symbols.
-* *Staff lines* - The pixels classified as staff lines.
-* *Text* - The pixels classified as text.
+* **Background** - The pixels classified as background.
+* **Layer 0** - The pixels classified as layer 0.
+* *Layer Outputs* - Some number of layers (layer 1–9) can be added as outputs. The results of *layer n*, are the pixels classified as *layer n* according to *model n*.
 * *Log File* - A log file of classification.
