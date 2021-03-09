@@ -85,7 +85,7 @@ Note that the number of samples per class also affects memory utilization.
 * **Image** - The image to use for training and whose layers will be provided.
 * **Background layer** - The mask for the background layer.
 * **Selected regions** - The mask for regions of the image that were manually classified into layers.
-* **Layer 0** - The mask for the foreground layer. This layer is usually used for the symbols to be classified in the [classification step](./classification.md). In the case of OMR, this layer tends to be the 'music-symbol' layer.
+* **Layer 0** - The mask for the foreground layer. This layer is usually used for the symbols to be classified in the [classification step]({{site.baseurl}}/overview/classification.html#interactive-classifier). In the case of OMR, this layer tends to be the 'music-symbol' layer.
 * *Layer Inputs* - Some number of layers (layer 1–9) can be added as inputs. 
 
 ### Output Ports
@@ -115,7 +115,7 @@ Since resource limits must be specified a priori on the clusters, the following 
 * **Image** - The image to use for training and whose layers will be provided.
 * **Background layer** - The mask for the background layer.
 * **Selected regions** - The mask for regions of the image that were manually classified into layers.
-* **Layer 0** - The mask for the foreground layer. This layer is usually used for the symbols to be classified in the [classification step](./classification.md). In the case of OMR, this layer tends to be the 'music-symbol' layer.
+* **Layer 0** - The mask for the foreground layer. This layer is usually used for the symbols to be classified in the [classification step]({{site.baseurl}}/overview/classification.html#interactive-classifier). In the case of OMR, this layer tends to be the 'music-symbol' layer.
 * *Layer Inputs* - Some number of layers (layer 1–9) can be added as inputs. 
 
 ### Output Ports
@@ -143,7 +143,7 @@ or background.
 * **Image** - An image whose pixels are to be classified.
 * **Background Model** - The model for the background.
 * **Model 0** - The model corresponding to layer 0.
-* *Model Inputs* - Some number of models (model 1–9) can be added as inputs. These nine optional input models correspond to the nine optional output models of the [trainer part](#patchwise-trainer).
+* *Model Inputs* - Some number of models (model 1–9) can be added as inputs. These nine optional input models correspond to the nine optional output models of the [trainer part]({{site.baseurl}}/overview/document-analysis.html#patchwise-trainer).
 
 ### Output Ports
 
