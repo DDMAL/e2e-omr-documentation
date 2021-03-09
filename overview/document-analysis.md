@@ -85,7 +85,7 @@ Note that the number of samples per class also affects memory utilization.
 * **Image** - The image to use for training and whose layers will be provided.
 * **Background layer** - The mask for the background layer.
 * **Selected regions** - The mask for regions of the image that were manually classified into layers.
-* **Layer 0** - The mask for the foreground layer. This layer is usually used for the symbols to be classified in the [classification step]({{site.baseurl}}/overview/classification.html#interactive-classifier). In the case of OMR, this layer tends to be the 'music-symbol' layer.
+* **Layer 0** - The mask for the foreground layer. This layer is usually used for the symbols to be classified in the [classification step]({{site.baseurl}}/overview/classification.html#interactive-classifier). In the case of OMR, this layer tends to be the 'music symbol' layer.
 * *Layer Inputs* - Some number of layers (layer 1–9) can be added as inputs. 
 
 ### Output Ports
@@ -115,7 +115,7 @@ Since resource limits must be specified a priori on the clusters, the following 
 * **Image** - The image to use for training and whose layers will be provided.
 * **Background layer** - The mask for the background layer.
 * **Selected regions** - The mask for regions of the image that were manually classified into layers.
-* **Layer 0** - The mask for the foreground layer. This layer is usually used for the symbols to be classified in the [classification step]({{site.baseurl}}/overview/classification.html#interactive-classifier). In the case of OMR, this layer tends to be the 'music-symbol' layer.
+* **Layer 0** - The mask for the foreground layer. This layer is usually used for the symbols to be classified in the [classification step]({{site.baseurl}}/overview/classification.html#interactive-classifier). In the case of OMR, this layer tends to be the 'music symbol' layer.
 * *Layer Inputs* - Some number of layers (layer 1–9) can be added as inputs. 
 
 ### Output Ports
@@ -149,5 +149,5 @@ or background.
 
 * **Background** - The pixels classified as background.
 * **Layer 0** - The pixels classified as layer 0.
-* *Layer Outputs* - Some number of layers (layer 1–9) can be added as outputs. The results of *layer n*, are the pixels classified as *layer n* according to *model n*.
+* *Layer Outputs* - Some number of layers (layer 1–9) can be added as outputs. The output of *layer n* are the pixels classified as *layer n* according to *model n*.
 * *Log File* - A log file of classification.
