@@ -20,7 +20,7 @@ If text alignment was performed, textual information is also included and used t
 
 ### Input Ports
 
-* **JSOMR** - A JSON file containing OMR information on staves, glyphs, and the page.
+* **JSOMR** - A JSON file containing OMR information on staves, glyphs, and the page. This can be produced by the [Heuristic Pitch Finding job]({{site.baseurl}}/overview/reconstruction-and-encoding.html#heuristic-pitch-finding).
 * **MEI Mapping CSV** - A file mapping classes of glyphs to MEI snippets.
 This can be produced by the [MEI Mapping Tool](https://github.com/DDMAL/mei-mapping-tool).
 * *Text Alignment JSON* - A file containing the text alignment information
