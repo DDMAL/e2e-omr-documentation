@@ -41,8 +41,8 @@ automatically separating layers in other images, specifically other pages from t
 The music symbol layers found using the models in the previous step are broken
 into a collection of connected components or glyphs. Each of these connected components
 are then classified as score elements (e.g., C clef, custos, punctum).
-This requires training data for each of the different classes, a set of
-sample glyphs for each type of element to be identified. If prepared training data already
+This requires training data for each of the different classes (i.e., a set of
+sample glyphs for each type of element to be identified). If prepared training data already
 exists, it can be used to classify glyphs non-interactively. Else, training data can be
 created from a manuscript page using the Interactive Classifier.
 

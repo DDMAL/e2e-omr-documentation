@@ -42,7 +42,7 @@ format, you'll need the following materials:
     * Consult the [tutorial section on document analysis]({{ "/tutorial/document-analysis" | prepend:site.baseurl }})
     for instructions on developing these models.
 3. Training data for classifying music symbol glyphs in the format used by
-[Gamera](https://gamera.infomatik.hsnr.de);
+[Gamera](https://gamera.informatik.hsnr.de);
     * Consult the
     [tutorial section on symbol classification]({{ "/tutorial/classification" | prepend:site.baseurl }})
     for instructions on generating training data from a few pages of a manuscript.
