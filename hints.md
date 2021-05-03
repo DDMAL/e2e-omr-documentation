@@ -66,5 +66,3 @@ In addition to the images and transcript texts, there are other resources needed
 Unlike the images and transcript text files, these resources are constant between workflow runs. Therefore, the user just needs to assign one resource to the corresponding input port, and that resource will be used in all workflow runs generated.
 
 ![Annotated OMR workflow for digital resources]({{site.baseurl}}/assets/workflow-with-resize-annotated-for-digital-resources.png)
-
-Note: the Neon job at the end of the workflow should be removed when processing multiple folios since only single-page mode is present on the Rodan job of Neon. We are working on adding the multiple-page mode functionality to the Neon job soon.
