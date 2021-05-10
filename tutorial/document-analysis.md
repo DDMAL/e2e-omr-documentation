@@ -33,7 +33,7 @@ The more layered pages that are provided to the Patchwise Trainer, the more data
 it has to train on to segment the document into the background, music symbols, staff lines,
 and text layers.
 
-To cmobine the images (and layers), we used the software Image Magick. The dimensions of the files differed slightly, so background values to fill gaps
+To combine the images (and layers), we used the software Image Magick. The dimensions of the files differed slightly, so background values to fill gaps
 needed to be specified to the software. The full images were
 taken with a black background, and so "black" was used as the background color for gaps
 when those images were combined. This can be seen in the next code snippet, where the images of three folios are combined into a single file (`40-230-176.png`).
