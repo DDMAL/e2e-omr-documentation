@@ -12,7 +12,7 @@ nav_order: 5
 This page demonstrates steps to perform iterative training using `background_removal`, `Pixel_js`, `Training model of Patchwise Analysis of Music Document, Training`, and `Training model of Patchwise Analysis of Music Document, Classifying`. Overall, the iterative training process contains the following steps:
 1. (*Iteration 1*) Annotate layers with `background removal` and `pixel`.
 2. (*Iteration 1*) Use `Paco Trainer` to generate models with the image and layers you just annotated.
-3. (*Iteration 1*) Send the generated models and new image to `Paco Classifier`. The classifier predict layers of this new image for you.
+3. (*Iteration 1*) Send the generated models and new image to `Paco Classifier`. The classifier predicts layers of this new image for you.
 4. (*Iteration 2+*) Correct predicted layers. Repeat `step 1`~`step 3` until you get satisfying results (i.e., when the paco classifier is able to predict layers correctly).
 
 ---

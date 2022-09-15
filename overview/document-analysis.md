@@ -74,7 +74,7 @@ Note that if you are classifying *n* layers, you should add output ports for
 
 ### Output Ports
 * `RGBA PNG image` of type `rgba+png`: the input `Image` with its background removed. 
-* The reuslt looks like this:
+* The result looks like this:
 <figure markdown="1">
 ![]({{site.baseurl}}/assets/background-removal.png)
 </figure>
