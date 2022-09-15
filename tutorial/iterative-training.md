@@ -5,21 +5,25 @@ parent: OMR Tutorial
 nav_order: 5
 ---
 # Iterative Training with Paco Classifier
-![](https://i.imgur.com/2onLoUw.png)
+<figure markdown="1">
+![]({{site.baseurl}}/assets/workflow-iterative-training.png)
+</figure>
 
-This page demosntrates steps to perform iterative training using `background_removal`, `Pixel_js`, `Training model of Patchwise Analysis of Music Document, Training`, and `Training model of Patchwise Analysis of Music Document, Classifying`. Overall, the iterative training process contains the following steps:
+This page demonstrates steps to perform iterative training using `background_removal`, `Pixel_js`, `Training model of Patchwise Analysis of Music Document, Training`, and `Training model of Patchwise Analysis of Music Document, Classifying`. Overall, the iterative training process contains the following steps:
 1. (*Iteration 1*) Annotate layers with `background removal` and `pixel`.
-2. (*Iteration 1*) Use `Paco Trainer` to generate models with the manuscript and layers you just annotated.
-3. (*Iteration 1*) Send the generated models and new manuscripts to `Paco Classifier`. It predict layers for you.
-4. (*Iteration 2+*) Correct predicted layers. Repeat `step 1`~`step 3` until you get satisfying results (means the paco classifier is able to predict layers correctly).
+2. (*Iteration 1*) Use `Paco Trainer` to generate models with the image and layers you just annotated.
+3. (*Iteration 1*) Send the generated models and new image to `Paco Classifier`. The classifier predicts layers of this new image for you.
+4. (*Iteration 2+*) Correct predicted layers. Repeat `step 1`~`step 3` until you get satisfying results (i.e., when the paco classifier is able to predict layers correctly).
 
 ---
 ## Iteration 1
 ### Background Removal.
-This step uses the [`background_removal`](../overview/document-analysis.md#background-removal) job to remove background of a manuscript. It provides two methods to do background removal: using `Sauvola's Threshold` or `SAE binarization.` In this example, we use `Sauvola's Threshold` and its default settings.
+This step uses the [`background_removal`](../overview/document-analysis.md#background-removal) job to remove the background of an image. It provides two methods to do background removal: using `Sauvola's Threshold` or `SAE binarization.` In this example, we use `Sauvola's Threshold` and its default settings.
 
-The reuslt looks like this:
-![](https://i.imgur.com/sTnVwaL.png)
+The result looks like this:
+<figure markdown="1">
+![]({{site.baseurl}}/assets/background-removal.png)
+</figure>
 
 
 ### Pixel_js
@@ -94,4 +98,4 @@ The input for this job is a manuscript that we're going to classify and generate
 ## Iteration 2+
 For `2+` iterations, the workflow `Paco Trainer` and `Paco Classifier` is the same. The only difference is the `Background Removal` and `Pixel_js`.
 
-Basically, in `2+` iteration, we don't need the `Background Removal` job anymore. The predicted layers, output `Layer<i>` from `Paco Classifier` of the last iteration, are the input layers (`PNG-Layer<i> Input`) to `Pixel_js`. So we correct the predicted layers from the trained model of the previous, send all zip files we've used in the previous iteration to `Paco Trainer`, and add the new zip file that we've just corrected using `Pixel_js`.
+Basically, in `2+` iteration, we don't need the `Background Removal` job anymore. The predicted layers, output `Layer<i>` from `Paco Classifier` of the last iteration, are the input layers (`PNG-Layer<i> Input`) to `Pixel_js`. So we correct the predicted layers from the trained model of the previous iteration, send all zip files we've used in the previous iteration to the `Paco Trainer` job, and add the new zip file that we've just corrected using `Pixel_js`.
