@@ -74,7 +74,11 @@ Note that if you are classifying *n* layers, you should add output ports for
 
 ### Output Ports
 * `RGBA PNG image` of type `rgba+png`: the input `Image` with its background removed. 
-  * The reuslt looks like this: ![](https://i.imgur.com/sTnVwaL.png)
+* The reuslt looks like this:
+<figure markdown="1">
+![]({{site.baseurl}}/assets/background-removal.png)
+</figure>
+
 * (Optional) `Empty Layer`: An empty layer ready to be used as the `PNG-Layer<i> Input` of the `Pixel_js` job.
 
 ## SAE binarization
