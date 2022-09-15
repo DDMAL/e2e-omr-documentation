@@ -5,7 +5,9 @@ parent: OMR Tutorial
 nav_order: 5
 ---
 # Iterative Training with Paco Classifier
-![](https://i.imgur.com/2onLoUw.png)
+<figure markdown="1">
+![]({{site.baseurl}}/assets/workflow-iterative-training.png)
+</figure>
 
 This page demosntrates steps to perform iterative training using `background_removal`, `Pixel_js`, `Training model of Patchwise Analysis of Music Document, Training`, and `Training model of Patchwise Analysis of Music Document, Classifying`. Overall, the iterative training process contains the following steps:
 1. (*Iteration 1*) Annotate layers with `background removal` and `pixel`.
@@ -19,7 +21,9 @@ This page demosntrates steps to perform iterative training using `background_rem
 This step uses the [`background_removal`](../overview/document-analysis.md#background-removal) job to remove background of a manuscript. It provides two methods to do background removal: using `Sauvola's Threshold` or `SAE binarization.` In this example, we use `Sauvola's Threshold` and its default settings.
 
 The reuslt looks like this:
-![](https://i.imgur.com/sTnVwaL.png)
+<figure markdown="1">
+![]({{site.baseurl}}/assets/background-removal.png)
+</figure>
 
 
 ### Pixel_js
