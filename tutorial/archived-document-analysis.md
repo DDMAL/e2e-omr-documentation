@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Archived: Document Analysis Tutorial (Old Way)
+title: Archived - Document Analysis Tutorial (Old Way)
 parent: OMR Tutorial
 nav_order: 5
 ---
