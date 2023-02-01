@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Iterative Training with Paco Classifier
+title: Document Analysis Tutorial
 parent: OMR Tutorial
 nav_order: 1
 ---
