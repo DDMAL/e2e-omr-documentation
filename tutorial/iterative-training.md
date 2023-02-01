@@ -2,9 +2,9 @@
 layout: default
 title: Iterative Training with Paco Classifier
 parent: OMR Tutorial
-nav_order: 5
+nav_order: 1
 ---
-# Iterative Training with Paco Classifier
+# Document Analysis by Iterative Training with Paco Classifier
 <figure markdown="1">
 ![]({{site.baseurl}}/assets/workflow-iterative-training.png)
 </figure>

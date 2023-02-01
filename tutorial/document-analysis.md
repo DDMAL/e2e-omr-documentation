@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Document Analysis Tutorial
+title: Archived - Document Analysis Tutorial (Old Way)
 parent: OMR Tutorial
-nav_order: 1
+nav_order: 5
 ---
 
 *Note: This tutorial uses [CDN-Mlr 073](https://archive.org/details/McGillLibrary-rbsc_ms-medieval-073-18802).*
 
-# Image Layering
+# Document Analysis
+## Image Layering
 
 OMR requires the complicated mixture of information in a manuscript image
 to be separated in specific layers (e.g., staff lines, background, text, music symbols).
@@ -70,7 +71,7 @@ These combined and resized files were uploaded back to Rodan for the next step.
 To upload resources to Rodan, create or enter a project, click the "Resources" button, and
 then click "Upload Resource(s)" to select resources to upload.
 
-# Model Training
+## Model Training
 
 Once the images and layers to use have been combined, the [Patchwise Trainer]({{site.baseurl}}/overview/document-analysis#hpc-patchwise-trainer) can be used
 to generate new models.
@@ -89,7 +90,7 @@ We will use this for our example with the following settings:
 * Patch width: 256
 * Patch height: 256
 
-# Layer Extraction of Another Page
+## Layer Extraction of Another Page
 
 After testing that the models work on pages that they were trained on (e.g., page 176)
 it is time to use them on another page from the same manuscript. Here,
