@@ -9,7 +9,7 @@ nav_order: -1
 
 ## Websites
 
-Relatively up-to-date versions of Rodan can be found on the [staging site](https://rodan-staging.simssa.ca)
+Relatively up-to-date versions of Rodan can be found on the [staging site](https://rodan.staging.simssa.ca))
 and [the new production site](https://rodan2.simssa.ca). A guest account with the username and password
 "guest" is present on the staging site for new users trying out the system. As materials associated with this account may be deleted at any time,
 anyone interested in using Rodan for OMR projects should contact <mailto:ddmal.lab.manager@gmail.com>.
